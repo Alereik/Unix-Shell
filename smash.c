@@ -200,7 +200,7 @@ char** splitline(char** str_arr, char* input_ln, char* delim, int* num_pcs) {
   int i = 0;
   while ((str_arr[i] = strsep(&input_ln, delim)) != NULL) {
     if (strcmp(str_arr[i], "\0") != 0 && strcmp(str_arr[i], "\n") != 0
-        && strcmp(str_arr[i], "\t") != 0) {
+        && strcmp(str_arr[i], "\t") != 0  && strcmp(str_arr[i], "") != 0) {
       i++;
     }
   }
